@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* customizing ChromePicker component form color library */
+
+
+ /* .flexbox-fix {
+  flex-direction: column;
+  flex-direction: column-reverse;
+  gap: 5px;
+}
+
+ .flexbox-fix svg {
+  display: none;
+}
+
+
+ .chrome-picker {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+label {
+    display: none !important;
+}
+
+input#rc-editable-input-1 {
+    display: none;
+} */
+
+/* .flexbox-fix > div:first-child > div > div {
+  margin-top: 0px;
+  width: 30px;
+  height: 40px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flexbox-fix > div:first-child > div {
+  margin-top: 0px;
+  width: 30px !important;
+  height: 24px !important;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+ 
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+
+
+/* *{
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}   */
