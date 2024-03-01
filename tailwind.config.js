@@ -13,6 +13,8 @@ module.exports = {
         fcolor: "#FF5B9F",
         fcolor300: "#8B8B8B",
         bgColor: "#F9F9F9",
+        uploadBackground: "#DBE8E6",
+        bgText: "#065D4D",
       },
       boxShadow: {
         custom: "0px 3px 6px #00000029",

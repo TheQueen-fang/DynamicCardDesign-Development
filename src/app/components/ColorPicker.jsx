@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChromePicker } from "react-color";
 
-const ColorPickerSketch = ({ onColorChange }) => {
+const ColorPickerSketch = ({ onColorChange,text,set}) => {
   const [color, setColor] = useState("#ff0000");
+  useEffect(() => {
+    if (text && text.color) {
+      setColor(text.color);
+    }
+  }, [text]);
 
+  
   const handleChange = (newColor) => {
     setColor(newColor.hex);
+    if (set) {
+      set((prev) => ({
+        ...prev,
+        color: color,
+      }));
+   }
     onColorChange && onColorChange(newColor.hex);
+    
   };
 
   return (
@@ -18,17 +31,13 @@ const ColorPickerSketch = ({ onColorChange }) => {
         styles={{
           default: {
             picker: {
-              width: "254px", // Set the desired width
-              // borderRadius: "80px", // Adjust the border-radius as needed,
-
+              width: "254px", 
               height: "50px",
             },
           },
         }}
       />
-      {/* <div className="absolute   top-[200px]  left-20">
-        <p className="text-sm font-medium text-gray-800">{color}</p>
-      </div> */}
+   
     </div>
   );
 };

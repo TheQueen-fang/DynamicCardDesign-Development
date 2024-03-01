@@ -25,12 +25,18 @@ export default function RootLayout({ children }) {
     underline: false,
     textStrike: false,
     sliderValue: 20,
-    color: "#ff0000",
-    alignL: "left",
-    alignC: "false",
-    alignR: "false",
+    color: "#000000",
+    alignL: false,
+    alignC: false,
+    alignR: false,
     bgColor: "white",
-    qrColor:"white",
+    qrColor: "white",
+    background: false,
+    bgImage: false,
+    qrPanel: false,
+    qrColor: "#000000",
+    qr: false,
+    backgroundImage:null,
   });
   return (
     <html lang="en">

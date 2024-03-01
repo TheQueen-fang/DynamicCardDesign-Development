@@ -16,10 +16,47 @@
   }
 }
 
+.chrome-picker {
+  height: auto !important;
+}
+
+
+
+
+
+
+
+
+
 /* customizing ChromePicker component form color library */
 
 
- /* .flexbox-fix {
+/* remove options svg successfully ! */
+
+.chrome-picker  {
+  margin: auto;
+}
+
+/* .chrome-picker > div{
+  
+} */
+.chrome-picker > div:first-child {
+ padding-bottom: 34% !important;
+}
+
+
+div[style*="width: 32px"]{
+  display: none;
+}
+label[style*="line-height: 11px"] {
+  display: none !important;
+}
+
+.flexbox-fix > .flexbox-fix > div > div > label {
+  display: none !important;
+}
+
+/* .flexbox-fix {
   flex-direction: column;
   flex-direction: column-reverse;
   gap: 5px;
@@ -77,8 +114,6 @@ input#rc-editable-input-1 {
     )
     rgb(var(--background-start-rgb));
 } */
-
-
 
 /* *{
   box-shadow: none !important;

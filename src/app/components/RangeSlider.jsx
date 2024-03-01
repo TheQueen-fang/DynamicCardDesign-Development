@@ -4,15 +4,25 @@ import InputElement3 from './InputElement3';
 
 import { AppContext } from '../layout';
 
-const RangeSlider = () => {
+const RangeSlider = ({func, set,text}) => {
   const { initialState, setInitialState } = useContext(AppContext);
-  const [sliderValue, setSliderValue] = useState(50);
+  const [sliderValue, setSliderValue] = useState(20);
+
   useEffect(() => {
-    console.log('use Effect is gettig called !',   initialState.sliderValue);
+    if (text && text.fontSize) {
+      setSliderValue(text.fontSize);
+    }
+  }, [text]);
+  useEffect(() => {
+     set((prev) => ({
+       ...prev,
+      fontSize:sliderValue,
+     }));
     setInitialState((prev) => ({
       ...prev,
-      sliderValue: sliderValue,
-    }));
+      sliderValue:sliderValue,
+    }))
+   
   }, [sliderValue]);
 
   const updateSliderValue = (event) => {
@@ -20,9 +30,9 @@ const RangeSlider = () => {
     setSliderValue(event.target.value);
     setInitialState((prev) => ({
       ...prev,
-      aliderValue:sliderValue,
+      sliderValue:sliderValue,
     }));
-    
+    func();
      
   };
 
